@@ -64,9 +64,9 @@ class ClubController extends AbstractController
     {
         $club= new Club();
         $form=$this->createForm(ClubType::class,$club);
-        //$club->setName("club2");
-       //   $club->setDescription("description2");
-       //  $em= $this->getDoctrine()->getManager();
+        //  $club->setName("club2");
+        //   $club->setDescription("description2");
+        //   $em= $this->getDoctrine()->getManager();
         $form->handleRequest($request);
         if($form->isSubmitted()){
             $em =$doctrine->getManager() ;

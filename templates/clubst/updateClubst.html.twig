@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Update ClubSt</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+    <h1>Update ClubSt</h1>
+    <p>editer un ClubSt</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        {{ form_start(formClubst) }}
+        <table>
+            <tbody>
+              <tr>
+                <th>Ref:</th>
+                <td>{{ form_widget(formClubst.ref) }}</td>
+            </tr>
+          <tr>
+                <th>CreatedAt:</th>
+                <td>{{ form_widget(formClubst.CreatedAt|date('d-m-Y')) }}</td>
+            </tr>
+          
+           
+            <tr>
+                <th></th>
+                <td>{{ form_widget(formClubst.submit) }}</td>
+            </tr>
+            </tbody>
+        </table>
+
+        {{ form_end(formClubst) }}
+    </div>
+</div>
+
+</body>
+</html>
